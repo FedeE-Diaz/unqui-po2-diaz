@@ -1,12 +1,11 @@
 package ar.edu.po2.tp3;
 
-import java.util.ArrayList;
 
 public class Counter {
 	
 	private int[] listaDeNumeros;
 	
-	Counter(int[] unaListaDeNumeros){
+	public Counter(int[] unaListaDeNumeros){
 		this.setListaDeNumeros(unaListaDeNumeros);
 }
 	
@@ -18,24 +17,36 @@ public class Counter {
 		this.listaDeNumeros = listaDeNumeros;
 	}
 	
-	public int contarPares() {
+	public int cantidadPares() {
 		int contador;
 		contador = 0;
 		
 		for(int numero:listaDeNumeros){
-			if (numero / 2 == 0) {
+			if (numero % 2 == 0) {
 				contador ++;
 			}
 		}
 		return contador;
 	}
 	
-	public int contarImpares( ) {
+	public int cantidadImpares( ) {
 		int contador;
 		contador = 0;
 		
 		for(int numero:listaDeNumeros){
-			if (numero / 2 != 0) {
+			if (numero % 2 != 0) {
+				contador ++;
+			}
+		}
+		return contador;
+	}
+	
+	
+	public int cantidadMultiplos(int numero) {
+		int contador;
+		contador = 0;
+		for(int i = 1; i <= numero; i++ ) {
+			if (numero % i == 0) {
 				contador ++;
 			}
 		}
