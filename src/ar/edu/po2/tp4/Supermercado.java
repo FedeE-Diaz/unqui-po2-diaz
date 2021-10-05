@@ -12,6 +12,7 @@ public class Supermercado {
 	public Supermercado(String nombre, String direccion) {
 		setNombre(nombre);
 		setDireccion(direccion);
+		setCatalogo(new ArrayList<Producto>());
 	}
 	
 	
@@ -34,7 +35,22 @@ public class Supermercado {
 		this.catalogo = catalogo;
 	}
 	
-	public agregarProducto(Producto producto) {
+	public void agregarProducto(Producto producto) {
 		this.catalogo.add(producto);
 	}
+	
+	public int getCantidadDeProductos() {
+		return this.getCatalogo().size();
+	    
+	}
+	public double getPrecioTotal() {
+		double precioTotal;
+		precioTotal = 0;
+		
+		for(Producto producto:this.catalogo) {
+			precioTotal = precioTotal + producto.getPrecio();
+		}
+		return precioTotal;
+	}    
+	
 }

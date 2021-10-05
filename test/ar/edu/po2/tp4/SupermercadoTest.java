@@ -1,4 +1,4 @@
-package ar.edu.po2.tp4;4
+package ar.edu.po2.tp4;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
