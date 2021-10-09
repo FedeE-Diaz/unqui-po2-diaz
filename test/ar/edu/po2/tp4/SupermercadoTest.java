@@ -13,7 +13,7 @@ public class SupermercadoTest {
 	
 	@BeforeEach
 	public void setUp() {
-		arroz = new Producto("Arroz", 18.9d, true);
+		arroz = new Producto("Arroz", 20d, true, 0.25);
 		detergente = new Producto("Detergente", 75d);
 		supermercado = new Supermercado("Lo de Tito", "Av Zubeldia 801");
 		
@@ -32,6 +32,6 @@ public class SupermercadoTest {
 		assertEquals(new Double(0), supermercado.getPrecioTotal());
 		supermercado.agregarProducto(arroz);
 		supermercado.agregarProducto(detergente);
-		assertEquals(new Double(93.9), supermercado.getPrecioTotal());
+		assertEquals(new Double(90), supermercado.getPrecioTotal());
 	}
 }

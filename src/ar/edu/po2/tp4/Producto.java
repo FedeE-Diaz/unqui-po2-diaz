@@ -10,9 +10,9 @@ public class Producto {
 		setPrecio(precio);
 		setEsencial(false);
 	}
-	public Producto(String nombre, Double precio, Boolean esencial) {
+	public Producto(String nombre, Double precio, Boolean esencial,Double descuento) {
 		setNombre(nombre);
-		setPrecio(precio);
+		setPrecio(precio * (1-descuento));
 		setEsencial(esencial);
 	}
 	
