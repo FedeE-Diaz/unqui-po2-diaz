@@ -12,7 +12,11 @@ public class Producto {
 	}
 	public Producto(String nombre, Double precio, Boolean esencial,Double descuento) {
 		setNombre(nombre);
+		if(esencial) {
 		setPrecio(precio * (1-descuento));
+		} else {
+			setPrecio(precio);
+		}
 		setEsencial(esencial);
 	}
 	
